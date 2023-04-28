@@ -87,7 +87,8 @@ curl -X POST \
 	     "url": "/some/folder/test.txt", "mimeType": "text/plain",  \
 	     "acls": [{"acl": "user@simsage.ai", "access": "R", "isUser": true}, \
 	     {"acl": "some group", "access": "R", "isUser": false}], \
-	     "title": "test document", "author": "Rock", "hash": "38957c50ca1330c74b702655fb1981bf", \
+	     "title": "test document", "author": "Rock", \
+	     "hash": "38957c50ca1330c74b702655fb1981bf", \
 	     "data": ";base64,Um9iZXJ0IG9mdGVuIHdvcmtzIGluIHJlY3J1aXRtZW50Lgo=", \
 	     "created": 1659695061000, \ 
 	     "lastModified": 1659695061000, \
