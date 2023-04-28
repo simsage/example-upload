@@ -6,6 +6,9 @@ import uuid
 import hashlib
 import base64
 
+# import all the mime-types: 'file-extension' -> 'mime-type'
+from mimetypemap import mime_type_map
+
 # what SimSage instance are we uploading to?
 # get this set of parameters below from your platform - the values shown here aren't real
 server_instance = 'my-simsage-instance.simsage.ai'
@@ -17,10 +20,6 @@ source_id = 1
 # SimSage url and headers, always the same
 headers = {'API-Version': '1', 'Content-type': 'application/json', 'Accept': 'application/json'}
 url = 'https://{}/api/crawler/external/document/upload'.format(server_instance)
-
-# map from file-name extensions to mime-types required by SimSage - just two mime-types shown here
-mime_type_map = {'ppt': 'application/vnd.ms-powerpoint',
-                 'txt': 'text/plain'}
 
 # generate a random runId - only change this one once you've processed all files (for each run through a set of files)
 run_id = uuid.uuid4()
