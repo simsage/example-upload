@@ -18,7 +18,7 @@ source_id = 1
 run_id = uuid.uuid4()
 
 # this will end up being the unique ID of this entity in SimSage
-filename = 'samples/840307.ppt'
+filename = 'sample-documents/840307.ppt'
 # this is the mime-type for a PPT file
 mime_type = 'application/vnd.ms-powerpoint'
 # empty ACL list for now (i.e. this file is accessible to anyone using the search-engine (if indexing is enabled))
