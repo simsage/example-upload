@@ -107,3 +107,4 @@ curl -X POST \
 | access    | R               | the level of access to this document for this user or group. R = Read / Search, W = Write, D = delete, M = modify |
 | isUser    | true            | True if `acl` is an email address of a user, otherwise False if the ACL is the name of a group                    |
 
+(Example group ACL: `{"acl": "Group Name", "access": "R", "isUser": false}`)
