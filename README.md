@@ -76,7 +76,7 @@ We POST data using JSON (see below).  The JSON data required is as follows (all 
 Now we have all the information we can upload some data into your SimSage instance.
 The following CURL command shows what to POST.
 
-```
+```shell
 curl -X POST \
 	-H 'Content-Type: application/json'  \
 	-H 'API-Version: 1' \
@@ -94,6 +94,16 @@ curl -X POST \
 	     "lastModified": 1659695061000, \
 	     "metadata": {"name1": "value1", "name2": "value2"}, "size": 35}' \
 	https://your-simsage-instance.simsage.ai/api/crawler/external/document/upload
+```
+
+*NB.* this `curl` is best executed as a single line command like so
+
+```shell
+curl -X POST -H 'Content-Type: application/json'  -H 'API-Version: 1' -d '{"organisationId": "9e8e81cf-408a-400c-9202-b1c2eb194797", "kbId": "4f20f106-362a-4541-bdc7-938ddb96a7a7", "sid": "dd59988d-7740-444e-8cda-f670b8ce28ba", "sourceId": 1, "runId": "e8e36035-dada-4f47-8123-59d42a74881c", "url": "/some/folder/test.txt", "mimeType": "text/plain",  "acls": [{"acl": "user@simsage.ai", "access": "R", "isUser": true}, {"acl": "some group", "access": "R", "isUser": false}], "title": "test document", "author": "Rock", "hash": "38957c50ca1330c74b702655fb1981bf", "data": ";base64,Um9iZXJ0IG9mdGVuIHdvcmtzIGluIHJlY3J1aXRtZW50Lgo=", "created": 1659695061000, "lastModified": 1659695061000, "metadata": {"name1": "value1", "name2": "value2"}, "size": 35}' https://your-simsage-instance.simsage.ai/api/crawler/external/document/upload
+```
+on success this POST will return the following JSON message.  The `error` field empty, and the `information` field containing `OK`.
+```json
+{"error":"","information":"OK","version":"7.7.3","time":1682673957648}
 ```
 
 *CURL parameters explained*
