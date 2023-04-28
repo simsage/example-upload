@@ -80,9 +80,9 @@ The following CURL command shows what to POST.
 curl -X POST \
 	-H 'Content-Type: application/json'  \
 	-H 'API-Version: 1' \
-	-d '{"organisationId": "c276f883-e0c8-43ae-9119-df8b7df9c573", \
-	     "kbId": "46ff0c75-7938-492c-ab50-442496f5de51", \
-	     "sid": "48f9a7f5-6d6b-9766-a232-6ef59eae7cae", \
+	-d '{"organisationId": "9e8e81cf-408a-400c-9202-b1c2eb194797", \
+	     "kbId": "4f20f106-362a-4541-bdc7-938ddb96a7a7", \
+	     "sid": "dd59988d-7740-444e-8cda-f670b8ce28ba", \
 	     "sourceId": 1, "runId": "e8e36035-dada-4f47-8123-59d42a74881c", \
 	     "url": "/some/folder/test.txt", "mimeType": "text/plain",  \
 	     "acls": [{"acl": "user@simsage.ai", "access": "R", "isUser": true}, \
