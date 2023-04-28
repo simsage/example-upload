@@ -8,7 +8,7 @@ import base64
 
 # what SimSage instance are we uploading to?
 # get this set of parameters below from your platform - the values shown here aren't real
-simsage_instance = 'demo2.simsage.ai'
+simsage_instance = 'your-simsage-instance.simsage.ai'
 organisation_id = '9e8e81cf-408a-400c-9202-b1c2eb194797'
 kb_id = '4f20f106-362a-4541-bdc7-938ddb96a7a7'
 sid = 'dd59988d-7740-444e-8cda-f670b8ce28ba'
