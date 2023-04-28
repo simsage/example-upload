@@ -21,7 +21,7 @@ run_id = uuid.uuid4()
 filename = 'samples/840307.ppt'
 # this is the mime-type for a PPT file
 mime_type = 'application/vnd.ms-powerpoint'
-# empty ACL list for now (i.e. this file is accessible by anyone)
+# empty ACL list for now (i.e. this file is accessible to anyone using the search-engine (if indexing is enabled))
 acls = []
 # get created and last-modified for this file
 file_stats = os.stat(filename)
@@ -59,6 +59,7 @@ headers = {'API-Version': '1', 'Content-type': 'application/json', 'Accept': 'ap
 result = requests.post(url, json=post_data, headers=headers)
 # print the return result - do something with it
 if result.status_code != 200:
+    # a "SimSage configuration error." means your API numbers are wrong (e.g. source_id, organisation_id, kb_id or sid)
     print("upload error for '{}' : {}".format(filename, result.content.decode("ascii")))
 else:
     print("upload successful")
