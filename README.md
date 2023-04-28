@@ -98,3 +98,12 @@ curl -X POST \
 | -H 'API-Verion: 1'                  | the current SimSage API version is 1                          |
 | -d '{ ... }'                        | the JSON data posted as a string                              |
 
+
+*ACLs explained*
+
+| Parameter | value           | description                                                                                                       |
+|-----------|-----------------|-------------------------------------------------------------------------------------------------------------------|
+| acl       | user@simsage.ai | the name of a group or the email address of a user                                                                |
+| access    | R               | the level of access to this document for this user or group. R = Read / Search, W = Write, D = delete, M = modify |
+| isUser    | true            | True if `acl` is an email address of a user, otherwise False if the ACL is the name of a group                    |
+
