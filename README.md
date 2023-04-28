@@ -1,6 +1,6 @@
 # example-upload
-How to upload data to SimSage from an external source programmatically
-
+How to upload data to SimSage from an external source programmatically.
+Go to the `python` folder in this repository to view a code example.
 
 ## API & Security
 
