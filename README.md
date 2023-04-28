@@ -34,10 +34,17 @@ Using Linux I can create a hash for the content (without the document ACLs) as f
 `Robert often works in recruitment.\n`
 
 ```
+# let's get an md5 sum for test.txt
 > md5sum test.txt
+
 	38957c50ca1330c74b702655fb1981bf
+	
+# let's encode the content of test.txt as a base64 string
 > base64 test.txt
+
 	Um9iZXJ0IG9mdGVuIHdvcmtzIGluIHJlY3J1aXRtZW50Lgo=
+
+# This string can be up to 50MB in size (configurable).  This string must be prefixed with ;base64, before POSTing.  
 ```
 
 The final SimSage concept you’ll need is that of a `run-id`. This property isn’t directly relevant to this upload, but the API will insist on one being passed. A `run-id` is simply a random GUID, which represents a single run through the data of a remote system. Its purpose is detect which files are no longer present after running through certain kinds of external systems.  You must use the same `run-id` while you're uploading all your data.  You must change the `run-id` in subsequent runs through the same data (e.g. to upload any changes).
