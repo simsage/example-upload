@@ -80,12 +80,18 @@ The following CURL command shows what to POST.
 curl -X POST \
 	-H 'Content-Type: application/json'  \
 	-H 'API-Version: 1' \
-	-d '{"organisationId": "c276f883-e0c8-43ae-9119-df8b7df9c573", "kbId": "46ff0c75-7938-492c-ab50-442496f5de51", "sid": "48f9a7f5-6d6b-9766-a232-6ef59eae7cae", 
-	     "sourceId": 1, "runId": "e8e36035-dada-4f47-8123-59d42a74881c", "url": "/some/folder/test.txt", "mimeType": "text/plain", 
-	     "acls": [{"acl": "user@simsage.ai", "access": "R", "isUser": true}, {"acl": "some group", "access": "R", "isUser": false}], 
-	     "title": "test document", "author": "Rock", "hash": "38957c50ca1330c74b702655fb1981bf", 
-	     "data": ";base64,Um9iZXJ0IG9mdGVuIHdvcmtzIGluIHJlY3J1aXRtZW50Lgo=", "created": 1659695061000, 
-	     "lastModified": 1659695061000, "metadata": {"name1": "value1", "name2": "value2"}, "size": 35}' \
+	-d '{"organisationId": "c276f883-e0c8-43ae-9119-df8b7df9c573", \
+	     "kbId": "46ff0c75-7938-492c-ab50-442496f5de51", \
+	     "sid": "48f9a7f5-6d6b-9766-a232-6ef59eae7cae", \
+	     "sourceId": 1, "runId": "e8e36035-dada-4f47-8123-59d42a74881c", \
+	     "url": "/some/folder/test.txt", "mimeType": "text/plain",  \
+	     "acls": [{"acl": "user@simsage.ai", "access": "R", "isUser": true}, \
+	     {"acl": "some group", "access": "R", "isUser": false}], \
+	     "title": "test document", "author": "Rock", "hash": "38957c50ca1330c74b702655fb1981bf", \
+	     "data": ";base64,Um9iZXJ0IG9mdGVuIHdvcmtzIGluIHJlY3J1aXRtZW50Lgo=", \
+	     "created": 1659695061000, \ 
+	     "lastModified": 1659695061000, \
+	     "metadata": {"name1": "value1", "name2": "value2"}, "size": 35}' \
 	https://your-simsage-instance.simsage.ai/api/crawler/external/document/upload
 ```
 
